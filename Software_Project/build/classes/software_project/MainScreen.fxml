@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="AnchorPane_Main" prefHeight="350" prefWidth="850" style="-fx-background-color: lightgrey;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="software_project.MainScreenController">
+    <children>
+        <Label fx:id="label" layoutX="20" layoutY="30" minHeight="16" minWidth="69" style="-fx-text-fill: midnightblue; -fx-font-size: 25px; -fx-font-weight: 600;" text="Inventory Management System" />
+        <Label fx:id="label_parts" alignment="CENTER" layoutX="25" layoutY="95" minHeight="15" minWidth="70" style="-fx-font-size: 12px; -fx-font-weight: 700;" text="Parts" />
+        <Label fx:id="label_products" alignment="CENTER" layoutX="455" layoutY="95" minHeight="15" minWidth="70" style="-fx-font-size: 12px; -fx-font-weight: 700;" text="Products" />
+        <Button fx:id="button_parts_search" layoutX="185" layoutY="93" onAction="#PartsSearchButtonAction" style="-fx-focus-color: transparent" text="Search" />
+        <Button fx:id="button_products_search" layoutX="605" layoutY="93" onAction="#ProductsSearchButtonAction" style="-fx-focus-color: transparent" text="Search" />
+        <TextField fx:id="textfield_parts" layoutX="245" layoutY="93" promptText="Part Name" />
+        <TextField fx:id="textfield_products" layoutX="665" layoutY="93" promptText="Product Name" />
+        <Button fx:id="button_parts_add" layoutX="80" layoutY="275" onAction="#PartsAddButtonAction" prefWidth="80" text="Add" />
+        <Button fx:id="button_parts_modify" layoutX="175" layoutY="275" onAction="#PartsModifyButtonAction" prefWidth="80" text="Modify" />
+        <Button fx:id="button_parts_delete" layoutX="270" layoutY="275" onAction="#PartsDeleteButtonAction" prefWidth="80" text="Delete" />
+        <Button fx:id="button_products_add" layoutX="490" layoutY="275" onAction="#ProductsAddButtonAction" prefWidth="80" text="Add" />
+        <Button fx:id="button_products_modify" layoutX="585" layoutY="275" onAction="#ProductsModifyButtonAction" prefWidth="80" text="Modify" />
+        <Button fx:id="button_products_delete" layoutX="680" layoutY="275" onAction="#ProductsDeleteButtonAction" prefWidth="80" text="Delete" />
+        <Button fx:id="button_exit" layoutX="750" layoutY="320" onAction="#ExitButtonAction" prefWidth="80" text="Exit" />
+        <TableView fx:id="table_parts" layoutX="30" layoutY="130" prefHeight="140" prefWidth="365">
+            <columns>
+                <TableColumn fx:id="part_ID" editable="false" prefWidth="60" text="Part ID" />
+                <TableColumn fx:id="part_Name" prefWidth="80" text="Part Name" />
+                <TableColumn fx:id="part_Inventory" prefWidth="100" text="Inventory Level" />
+                <TableColumn fx:id="part_Price" prefWidth="130" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        
+        <TableView fx:id="table_products" layoutX="450" layoutY="130" prefHeight="140" prefWidth="365">
+            <columns>
+                <TableColumn fx:id="product_ID" editable="false" prefWidth="80" text="Product ID" />
+                <TableColumn fx:id="product_Name" prefWidth="90" text="Product Name" />
+                <TableColumn fx:id="product_Inventory" prefWidth="100" text="Inventory Level" />
+                <TableColumn fx:id="product_Price" prefWidth="100" text="Price per Unit" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

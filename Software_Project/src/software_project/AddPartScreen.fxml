@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane_AddPart" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software_project.AddPartScreenController">
+   <children>
+            <Label layoutX="34.0" layoutY="23.0" style="-fx-text-fill: midnightblue; -fx-font-size: 20px; -fx-font-weight: 600;" text="Add Part">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="inHouseRadioButton" layoutX="159.0" layoutY="42.0" mnemonicParsing="false" onAction="#InHouseButtonSelected" selected="true" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="group1" />
+            </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="outsourcedRadioButton" layoutX="308.0" layoutY="42.0" mnemonicParsing="false" onAction="#OutsourcedButtonSelected" text="Outsourced" toggleGroup="$group1" />
+            <Label fx:id="addPartIDLabel" layoutX="98.0" layoutY="100.0" text="ID" />
+            <Label fx:id="addPartNameLabel" layoutX="98.0" layoutY="140.0" text="Name" />
+            <Label fx:id="addPartInvLabel" layoutX="98.0" layoutY="180.0" text="Inv" />
+            <Label fx:id="addPartPriceLabel" layoutX="98.0" layoutY="220.0" text="Price/Cost" />
+            <Label fx:id="addPartMaxLabel" layoutX="98.0" layoutY="260.0" text="Max" />
+            <Label fx:id="addPartMachineIDLabel" layoutX="98.0" layoutY="300.0" text="Machine ID" />
+            <Label fx:id="addPartMinLabel" layoutX="357.0" layoutY="260.0" text="Min" />
+            <TextField fx:id="addPartIDTextfield" disable="true" editable="false" layoutX="186.0" layoutY="95.0" promptText="Auto Gen - Disabled" style="-fx-border-color: grey;" />
+            <TextField fx:id="addPartNameTextfield" layoutX="186.0" layoutY="135.0" promptText="Part Name" style="-fx-border-color: grey;" />
+            <TextField fx:id="addPartInvTextfield" layoutX="186.0" layoutY="175.0" promptText="Inv" style="-fx-border-color: grey;" />
+            <TextField fx:id="addPartPriceTextfield" layoutX="186.0" layoutY="215.0" promptText="Price/Cost" style="-fx-border-color: grey;" />
+            <TextField fx:id="addPartMaxTextfield" layoutX="186.0" layoutY="255.0" promptText="Max" style="-fx-border-color: grey;" />
+            <TextField fx:id="addPartMachineIDTextfield" layoutX="186.0" layoutY="295.0" promptText="Mach ID" style="-fx-border-color: grey;" />
+            <Button fx:id="AddPartSaveButton" layoutX="342.0" layoutY="349.0" mnemonicParsing="false" onAction="#AddPartsSaveChanges" prefHeight="40.0" prefWidth="70.0" text="Save" />
+            <Button fx:id="AddPartCancelButton" layoutX="429.0" layoutY="349.0" mnemonicParsing="false" onAction="#AddPartsCancelChanges" prefHeight="40.0" prefWidth="70.0" text="Cancel" />
+            <TextField fx:id="addPartMinTextfield" layoutX="403.0" layoutY="255.0" promptText="Min" style="-fx-border-color: grey;" />
+      <TextField fx:id="addPartCompanyNameTextfield" layoutX="186.0" layoutY="295.0" promptText="Comp Name" style="-fx-border-color: grey;" visible="false" />
+      <Label fx:id="addPartCompanyNameLabel" layoutX="98.0" layoutY="300.0" text="Company Name" visible="false" />
+   </children>
+</AnchorPane>
